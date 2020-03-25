@@ -15,11 +15,6 @@ final class UploadedFileUploader implements UploaderInterface
 		$this->uploadedFile = $uploadedFile;
 	}
 
-	public function save(string $path, string $name): void
-	{
-		$this->uploadedFile->move($path . $name);
-	}
-
 	public function getContent(): string
 	{
 		return file_get_contents($this->uploadedFile->getFilename());
