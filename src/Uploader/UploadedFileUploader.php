@@ -17,7 +17,7 @@ final class UploadedFileUploader implements UploaderInterface
 
 	public function getContent(): string
 	{
-		return file_get_contents($this->uploadedFile->getFilename());
+		return file_get_contents($this->uploadedFile->getPathname());
 	}
 
 }
